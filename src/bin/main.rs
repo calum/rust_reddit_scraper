@@ -48,7 +48,7 @@ fn main() {
 
     // post the overall feed meta data to the api
     let feed = json!({
-        "logo": "http://www.redditstatic.com/desktop2x/img/favicon/android-icon-192x192.png",
+        "logo": "https://www.redditstatic.com/desktop2x/img/favicon/android-icon-192x192.png",
         "title": "Reddit",
         "description": "Latest comments and posts..."
     });

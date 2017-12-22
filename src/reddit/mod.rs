@@ -41,7 +41,7 @@ pub fn get_posts(api: &mut RedditApi, username: String) -> Vec<serde_json::Value
 
         let result = json!({
             "id": post.id,
-            "title": format!("{}: {}", post.subreddit, post.title),
+            "title": format!("{} in {}: {}", "Post", post.subreddit, post.title),
             "description": post.selftext_html,
             "link": post.url,
             "icon": "NA",
@@ -69,7 +69,7 @@ pub fn get_comments(api: &mut RedditApi, username: String) -> Vec<serde_json::Va
 
         let result = json!({
             "id": comment.id,
-            "title": format!("{}: {}", comment.subreddit, comment.link_title),
+            "title": format!("{} in {}: {}", "Comment", comment.subreddit, comment.link_title),
             "description": comment.body,
             "link": comment.link_url,
             "icon": "NA",
